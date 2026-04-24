@@ -33,23 +33,23 @@
     <!-- LOGO (sempre visível) -->
     <div class="menu-logo">
       <img src="Designer.png" alt="Claudia Pettersen">
-      <div class="logo-texto">
+      <!-- <div class="logo-texto">
         <strong>Claudia Pettersen</strong>
         <small>Psicóloga Clínica</small>
-      </div>
+      </div> -->
     </div>
 
     <!-- BOTÃO HAMBURGER (mobile) -->
+    
     <button
-      class="navbar-toggler ms-auto"
+      class="navbar-toggler menu-toggler-custom"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#menuMobile"
-      aria-controls="menuMobile"
-      aria-expanded="false"
       aria-label="Abrir menu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
 
     <!-- S -->
     <div class="collapse navbar-collapse" id="menuMobile">
@@ -57,7 +57,7 @@
       <ul class="menu-links">
         <li><a href="#home">Início</a></li>
         <li><a href="#ajuda">Atuação</a></li>
-        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
       </ul>
 
       <div class="menu-acoes">
@@ -93,7 +93,7 @@
 </section>
 
 <!-- SOBRE -->
-<section id="sobre" class="section">
+<section id="sobre" class="section bg-greenLight">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-md-5" data-aos="fade-right">
@@ -101,14 +101,12 @@
         <img 
           src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"
           alt="Psicóloga Claudia Pettersen"
-          class="img-fluid foto-perfil">
+          class="img-fluid foto-perfil shadow-sm ">
       </div>
       <div class="col-md-7" data-aos="fade-left">
-        <h2>Sobre mim</h2>
-        <p>
-          Sou psicóloga, oferecendo um espaço ético, seguro e acolhedor para o cuidado
-          com a saúde emocional. Meu trabalho é voltado ao autoconhecimento e ao
-          fortalecimento emocional.
+        <h2>Sobre nós</h2>
+        <p>          
+          Somos uma empresa dedicada ao cuidado com a saúde emocional, oferecendo um espaço ético, seguro e acolhedor para cada pessoa que atendemos. Nosso trabalho é guiado pelo compromisso com o bem‑estar psicológico, promovendo o autoconhecimento e o fortalecimento emocional como pilares para uma vida mais equilibrada e saudável. Atuamos com responsabilidade, respeito e sensibilidade, valorizando a singularidade de cada indivíduo e acreditando no potencial de transformação por meio do cuidado emocional.
         </p>
         <div class="qualificacoes mt-4">
 
@@ -121,7 +119,7 @@
 
         <div class="qualificacao-item">
             <div class="qualificacao-icone">
-            <i class="bi bi-brain"></i>
+            <i class="bi bi-flower2"></i>
             </div>
             <span>Formada em Terapia Cognitivo-Comportamental</span>
         </div>
@@ -149,8 +147,10 @@
   </div>
 </section>
 
+
+
 <!-- SAIBA COMO POSSO TE AJUDAR -->
-<section id="ajuda" class="section bg-light">
+<section id="ajuda" class="section bg-green">
   <div class="container">
     <h2 class="text-center mb-5" data-aos="fade-up">Saiba como posso te ajudar</h2>
 
@@ -185,54 +185,150 @@
     </div>
   </div>
 </section>
+<section class="section-divider-solid"></section>
+<section
+  class="section bg-greenLight"
+  style="background: var(--section-verde-claro);">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Abordagens Terapêuticas</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card ajuda-card">
+          <div class="icone-topo">🧠</div>
+          <h5>Psicologia Puerperal</h5>
+          <p>Atuação voltada ao cuidado emocional da mulher no período da gestação, parto e pós-parto. A Psicologia Puerperal oferece suporte para lidar com as intensas mudanças físicas, emocionais e sociais dessa fase.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="card ajuda-card">
+          <div class="icone-topo">💬</div>
+          <h5>Transtornos Alimentares, Obesidade e Cirurgia Bariátrica</h5>
+          <p>O acompanhamento psicológico auxilia na compreensão dos fatores emocionais envolvidos na alimentação, no desenvolvimento de hábitos mais saudáveis e no enfrentamento das mudanças físicas e emocionais decorrentes do processo.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card ajuda-card">
+          <div class="icone-topo">🧠</div>
+          <h5>Psicologia Jurídica e Avaliação Psicológica</h5>
+          <p>Área que integra a Psicologia ao contexto jurídico, realizando avaliações e intervenções psicológicas para subsidiar decisões judiciais.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card ajuda-card">
+          <div class="icone-topo">🧠</div>
+          <h5>Docência do Ensino Superior</h5>
+          <p>Atuação voltada à formação acadêmica e profissional, contribuindo para o desenvolvimento crítico, ético e científico de estudantes do ensino superior.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="card ajuda-card">
+          <div class="icone-topo">💬</div>
+          <h5>Psicologia do Trânsito</h5>
+          <p>Área especializada na compreensão do comportamento humano no trânsito. Atua na avaliação psicológica para condutores, prevenção de acidentes, educação para o trânsito e promoção de mobilidade segura.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card ajuda-card">
+          <div class="icone-topo">🧠</div>
+          <h5>Gestalt-Terapia</h5>
+          <p>Abordagem humanista que valoriza a experiência do indivíduo no aqui e agora, promovendo o autoconhecimento e a responsabilidade pessoal. A Gestalt‑Terapia auxilia o cliente a ampliar a consciência de sentimentos, pensamentos e comportamentos, favorecendo escolhas mais autênticas e relações mais saudáveis. O processo terapêutico é baseado no diálogo, na escuta empática e no fortalecimento da autonomia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-divider-solid"></section>
 
 <!-- CONTATO -->
 <section id="contato" class="section">
   <div class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-md-8" data-aos="fade-up">
+        <div class="card contato-card p-4">  
+          <h2 class="verde-escuro-profundo">Vamos conversar um pouco?</h2>
+          <p>Quando nos conectamos com aquilo que realmente importa, a vida ganha mais propósito e equilíbrio.</p>
+            <p>Te convido a agendar uma sessão para pensarmos, juntos, em como construir uma vida mais alinhada aos seus valores.</p>
+             <p>Será um prazer caminhar ao seu lado!</p>
+            
+
+          <div class="d-flex justify-content-center gap-5 contato-icons">
+
+            <a href="https://wa.me/5521965032679?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20psicóloga%20Claudia%20Pettersen" target="_blank" class="contato-item">
+              <i class="bi bi-whatsapp"></i>
+              <div class="texto">
+                <strong>(21) 96503-2679</strong>
+                <span>pelo WhatsApp</span>
+              </div>
+            </a>
+
+            <a href="https://instagram.com/claudiapettersen" target="_blank" class="contato-item">
+              <i class="bi bi-instagram"></i>
+              <div class="texto">
+                <strong>Siga-me</strong>
+                <span>no Instagram</span>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <section class="section-divider-strong"></section>
     <h2 class="text-center mb-4" data-aos="fade-up">Contato</h2>
     <div class="row justify-content-center">
       <div class="col-md-6" data-aos="fade-up">
         
         <form id="contatoForm">
-  <input 
-    id="nome"
-    class="form-control mb-3"
-    placeholder="Nome"
-    required
-  >
+          <input 
+            id="nome"
+            class="form-control mb-3"
+            placeholder="Nome"
+            required
+          >
 
-  <input 
-    id="email"
-    type="email"
-    class="form-control mb-3"
-    placeholder="E-mail"
-    required
-  >
+          <input 
+            id="email"
+            type="email"
+            class="form-control mb-3"
+            placeholder="E-mail"
+            required
+          >
 
-  <textarea 
-    id="mensagem"
-    class="form-control mb-3"
-    rows="4"
-    placeholder="Mensagem"
-    required
-  ></textarea>
+          <textarea 
+            id="mensagem"
+            class="form-control mb-3"
+            rows="4"
+            placeholder="Mensagem"
+            required
+          ></textarea>
 
-  <button 
-    type="submit"
-    class="btn btn-hero w-100"
-  >
-    Enviar mensagem
-  </button>
-</form>
+          <button 
+            type="submit"
+            class="btn btn-hero w-100"
+          >
+            Enviar mensagem
+          </button>
+        </form>
 
       </div>
     </div>
   </div>
 </section>
-
+<section class="section-divider-solid"></section>
 <!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 · Claudia Pettersen · Psicóloga</p>
+<footer class="footer bg-greenLight">
+ <div class="menu-logo">  
+      <img src="Designer.png" alt="Claudia Pettersen" style="display: block; margin: 0 auto;" class="logo-footer">
+     
+ </div>
+ <section class="section-divider-double"></section>
+  <p>Copyright © 2024 - Todos os direitos reservados.</p>
 </footer>
 
 <!-- WHATSAPP FLOAT -->

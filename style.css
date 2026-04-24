@@ -2,7 +2,20 @@
   --verde: #7c9a92;
   --verde-claro: #d9e4dd;
   --texto: #3a3a3a;
-  --fundo: #fafafa;
+  --fundo: #7c9a92;
+  --section-verde-claro: #d9e4dd98;
+  --verde-escuro-profundo: #4F6F68;
+  --verde-claro-suave: #B2C6C1;
+  --fundo: #F5F7F6;
+  --texto-principal: #2F3D3A;
+  --titulos: #4F6F68;
+  --botoes-principais: #7C9A92;
+  --hover-botao: #4F6F68;
+  --cards-secoes: #B2C6C1;
+  --bege-rosado-suave: #D8CFC8; 
+--cinza-escuro: #2F3D3A;
+--cinza-neutro: #8F9A98;
+--off-white-acolhedor: #F5F7F6;
 }
 
 body {
@@ -64,13 +77,22 @@ h1, h2, h5 {
   padding: 80px 0;
 }
 
-.bg-light {
+.bg-green {
   background: var(--fundo);
+}
+.bg-greenLight {
+  background: var(--section-verde-claro);
+}
+.verde-escuro-profundo {
+  color: var(--verde-escuro-profundo);
+  font-size: 40px;
+  margin-bottom: 16px;
 }
 
 /* FOTO */
 .foto-perfil {
   border-radius: 16px;
+  
 }
 
 /* AJUDA */
@@ -169,6 +191,10 @@ h1, h2, h5 {
 @media (max-width: 991px) {
   .menu-container {
     flex-wrap: nowrap;
+    
+    display: flex;
+    align-items: center
+
   }
 }
 
@@ -183,7 +209,7 @@ h1, h2, h5 {
 @media (max-width: 991px) {
 
   .menu-logo {
-    max-width: calc(100% - 60px);
+    max-width: calc(70% - 60px);
   }
 
   .logo-texto strong {
@@ -193,6 +219,12 @@ h1, h2, h5 {
   .logo-texto small {
     font-size: 12px;
   }
+
+  
+  .btn-agendar {
+    display: none !important;
+  }
+
 
 }
 .menu-logo {
@@ -256,6 +288,7 @@ h1, h2, h5 {
 
 /* AÇÕES */
 .menu-acoes {
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -338,4 +371,96 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #2F3D3A;
+  transition: transform 0.3s ease;
+}
+
+.contato-item i {
+  font-size: 48px;
+  color: #7C9A92;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contato-item strong {
+  font-size: 20px;
+  display: block;
+}
+
+.contato-item span {
+  font-size: 14px;
+  color: #7C9A92;
+}
+
+/* EFEITO HOVER */
+.contato-item:hover {
+  transform: scale(1.08);
+}
+
+.contato-item:hover i {
+  transform: scale(1.15);
+  color: #4F6F68;
+}
+
+.section-divider {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(34, 156, 124, 0.15) 0%,
+    rgba(124, 154, 146, 0.05) 50%,
+    rgba(245, 247, 246, 1) 100%
+  );
+  
+}
+
+.section-divider-strong {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #7C9A92,
+    transparent
+  );
+  margin: 80px 0;
+}
+.section-divider-solid {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(
+    90deg,
+    #4F6F68,
+    #7C9A92,
+    #4F6F68
+  );
+}
+.section-divider-double {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-divider-double::before,
+.section-divider-double::after {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background-color: #7C9A92;
+}
+
+.section-divider-double::before {
+  margin-right: 15px;
+}
+
+.section-divider-double::after {
+  margin-left: 15px;
+}
+
 
