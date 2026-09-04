@@ -1,0 +1,167 @@
+/* Pettersen Psicologia | Design system nude, blush e taupe */
+:root {
+  --color-primary: #CCABA5;
+  --color-primary-dark: #9A716B;
+  --color-secondary: #DDC2C0;
+  --color-surface: #EADADA;
+  --color-accent: #C8B7AA;
+  --color-background: #F8F4F3;
+  --color-text: #4F4140;
+  --color-text-light: #756461;
+  --color-white: #FFFFFF;
+  --color-border: #E4D8D6;
+  --color-whatsapp: #248A52;
+  --shadow-soft: 0 10px 30px rgba(79, 65, 64, 0.08);
+  --shadow-hover: 0 14px 34px rgba(79, 65, 64, 0.13);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --transition: 0.2s ease;
+
+  /* Compatibilidade com os nomes usados no HTML atual */
+  --verde: var(--color-primary);
+  --verde-claro: var(--color-secondary);
+  --texto: var(--color-text);
+  --fundo: var(--color-background);
+  --section-verde-claro: rgba(221, 194, 192, 0.45);
+  --verde-escuro-profundo: var(--color-primary-dark);
+  --verde-claro-suave: var(--color-surface);
+  --texto-principal: var(--color-text);
+  --titulos: var(--color-primary-dark);
+  --botoes-principais: var(--color-primary-dark);
+  --hover-botao: #815C57;
+  --cards-secoes: var(--color-surface);
+  --bege-rosado-suave: var(--color-accent);
+  --cinza-escuro: var(--color-text);
+  --cinza-neutro: var(--color-text-light);
+  --off-white-acolhedor: var(--color-background);
+}
+
+html { scroll-behavior: smooth; }
+html, body { max-width: 100%; overflow-x: hidden; }
+
+body {
+  margin: 0;
+  padding-top: 101px;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+h1, h2, h5, .navbar-brand {
+  color: var(--color-text);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.015em;
+}
+
+h2 { color: var(--color-primary-dark); }
+a, button, input, textarea { transition: var(--transition); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(154, 113, 107, 0.35);
+  outline-offset: 3px;
+}
+
+/* Navegacao */
+.navbar, .menu-custom {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(79, 65, 64, 0.08);
+  box-shadow: 0 3px 18px rgba(79, 65, 64, 0.06);
+  backdrop-filter: blur(10px);
+}
+.menu-container { display: flex; align-items: center; justify-content: space-between; gap: 44px; }
+.menu-logo { display: flex; align-items: center; gap: 12px; }
+.menu-logo img { height: 100px; width: auto; }
+.logo-texto { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-texto strong { color: var(--color-primary-dark); font-family: 'Playfair Display', serif; font-size: 18px; }
+.logo-texto small { color: var(--color-text-light); font-size: 13px; }
+.menu-links { display: flex; gap: 40px; margin: 0 60px 0 0; padding: 0; list-style: none; }
+.menu-links a { position: relative; color: var(--color-text); text-decoration: none; font-weight: 500; }
+.menu-links a::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 0; height: 2px; background: var(--color-primary-dark); transition: width var(--transition); }
+.menu-links a:hover { color: var(--color-primary-dark); }
+.menu-links a:hover::after { width: 100%; }
+.menu-acoes { display: flex; align-items: center; gap: 16px; margin-left: auto; }
+.menu-acoes a:not(.btn-agendar) { display: flex; width: 38px; height: 38px; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-secondary); text-decoration: none; }
+.menu-acoes a:not(.btn-agendar):hover { background: var(--color-primary); transform: translateY(-2px); }
+.menu-acoes i { color: var(--color-primary-dark); font-size: 18px; }
+.menu-acoes a:hover i { color: var(--color-white); }
+.btn-agendar, .btn-hero { display: inline-block; border: 1px solid var(--color-primary-dark); border-radius: 999px; background: var(--color-primary-dark); color: var(--color-white); padding: 12px 24px; text-decoration: none; font-weight: 500; box-shadow: 0 6px 16px rgba(154, 113, 107, 0.18); }
+.btn-agendar:hover, .btn-hero:hover { border-color: var(--hover-botao); background: var(--hover-botao); color: var(--color-white); transform: translateY(-1px); box-shadow: 0 9px 20px rgba(129, 92, 87, 0.23); }
+.navbar-toggler { border: 0; color: var(--color-primary-dark); }
+.menu-toggler-custom i { display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; border-radius: 10px; background: var(--color-primary-dark); color: var(--color-white); }
+
+/* Hero */
+.hero { position: relative; display: flex; min-height: calc(90vh - 100px); align-items: center; background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover no-repeat; }
+.overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(79, 65, 64, 0.34), rgba(79, 65, 64, 0.52)); }
+.hero-content { position: relative; color: var(--color-white); text-align: center; }
+.hero h1 { margin-bottom: 16px; color: var(--color-white); font-size: clamp(2.35rem, 5vw, 4.2rem); text-shadow: 0 2px 14px rgba(40, 30, 29, 0.28); }
+.hero p { margin-bottom: 28px; font-size: clamp(1rem, 2vw, 1.25rem); }
+
+/* Secoes e cards */
+.section { padding: 88px 0; }
+.bg-green { background: var(--color-background); }
+.bg-greenLight { background: var(--section-verde-claro) !important; }
+.verde-escuro-profundo { margin-bottom: 16px; color: var(--color-primary-dark); font-size: clamp(2rem, 4vw, 2.5rem); }
+.foto-perfil { border: 6px solid rgba(255, 255, 255, 0.72); border-radius: var(--radius-md); box-shadow: var(--shadow-soft) !important; }
+.card { border: 1px solid rgba(79, 65, 64, 0.08); background: rgba(255, 255, 255, 0.94); box-shadow: var(--shadow-soft); }
+.ajuda-card { height: 100%; border-radius: var(--radius-md); padding: 40px 30px; text-align: center; }
+.ajuda-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.icone-topo { display: flex; width: 72px; height: 72px; align-items: center; justify-content: center; margin: -70px auto 20px; border: 1px solid rgba(154, 113, 107, 0.12); border-radius: 50%; background: var(--color-secondary); font-size: 28px; box-shadow: 0 5px 14px rgba(79, 65, 64, 0.08); }
+.lista-ajuda { margin: 0; padding: 0; list-style: none; text-align: left; }
+.lista-ajuda li { position: relative; padding: 10px 0 10px 28px; border-bottom: 1px solid var(--color-border); }
+.lista-ajuda li::before { content: '✔'; position: absolute; left: 0; color: var(--color-primary-dark); }
+.qualificacoes { display: flex; flex-direction: column; gap: 16px; }
+.qualificacao-item { display: flex; align-items: center; gap: 14px; color: var(--color-text); font-size: 16px; }
+.qualificacao-icone { display: flex; width: 48px; height: 48px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: var(--radius-sm); background: var(--color-secondary); color: var(--color-primary-dark); font-size: 20px; }
+
+/* Contato e formulario */
+.contato-card { border-radius: var(--radius-md); text-align: center; }
+.contato-item { display: flex; align-items: center; gap: 15px; color: var(--color-text); text-decoration: none; }
+.contato-item i { color: var(--color-primary-dark); font-size: 46px; }
+.contato-item strong { display: block; font-size: 20px; }
+.contato-item span { color: var(--color-text-light); font-size: 14px; }
+.contato-item:hover { color: var(--color-primary-dark); transform: translateY(-2px); }
+.contato-item:hover i { transform: scale(1.06); color: var(--hover-botao); }
+.form-control { border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-text); padding: 13px 16px; }
+.form-control::placeholder { color: #907C78; }
+.form-control:focus { border-color: var(--color-primary-dark); box-shadow: 0 0 0 4px rgba(204, 171, 165, 0.24); }
+
+/* Divisores */
+.section-divider, .section-divider-strong, .section-divider-solid { width: 100%; }
+.section-divider { height: 20px; background: linear-gradient(180deg, rgba(204, 171, 165, 0.24), rgba(248, 244, 243, 0)); }
+.section-divider-strong { height: 2px; margin: 80px 0; background: linear-gradient(to right, transparent, var(--color-primary), transparent); }
+.section-divider-solid { height: 12px; background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), var(--color-accent)); }
+.section-divider-double { display: flex; width: 100%; height: 20px; align-items: center; justify-content: center; }
+.section-divider-double::before, .section-divider-double::after { content: ''; width: 40%; height: 2px; background: var(--color-primary); }
+.section-divider-double::before { margin-right: 15px; }
+.section-divider-double::after { margin-left: 15px; }
+
+/* Rodape e WhatsApp */
+.footer { padding: 50px 24px 36px; background: var(--color-secondary); color: var(--color-text); text-align: center; font-size: 14px; }
+.whatsapp-float { position: fixed; right: 22px; bottom: 22px; z-index: 1000; display: flex; width: 56px; height: 56px; align-items: center; justify-content: center; border: 3px solid var(--color-white); border-radius: 50%; background: var(--color-whatsapp); color: var(--color-white); font-size: 28px; text-decoration: none; box-shadow: 0 8px 22px rgba(36, 138, 82, 0.28); }
+.whatsapp-float:hover { background: #1D7444; color: var(--color-white); transform: translateY(-2px); }
+
+@media (max-width: 991px) {
+  body { padding-top: 88px; }
+  .menu-container { display: flex; flex-wrap: nowrap; align-items: center; gap: 12px; }
+  .menu-logo { max-width: calc(100% - 60px); }
+  .menu-logo img { height: 86px; max-width: 100%; object-fit: contain; }
+  .navbar-collapse { margin-top: 12px; padding: 20px; border-top: 1px solid var(--color-border); border-radius: 0 0 16px 16px; background: var(--color-white); box-shadow: var(--shadow-soft); }
+  .menu-links { flex-direction: column; align-items: flex-start; gap: 20px; margin: 0 0 24px; }
+  .menu-acoes { flex-direction: row; flex-wrap: wrap; align-items: center; margin-left: 0; }
+  .btn-agendar { display: block !important; width: 100%; text-align: center; }
+  .hero { min-height: 72vh; }
+  .section { padding: 68px 0; }
+}
+
+@media (max-width: 576px) {
+  .hero-content { padding-inline: 20px; }
+  .ajuda-card { padding: 36px 22px; }
+  .contato-item { justify-content: center; }
+  .footer .menu-logo img { height: 80px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
